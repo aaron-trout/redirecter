@@ -1,5 +1,5 @@
 # redirecter
-`redirecter` is a very small and simple Python application written in
+`redirecter` is a very small and simple Python application written with
 [aiohttp](https://aiohttp.readthedocs.io/) which redirects HTTP requests to
 another server of your choice, maintaining the path part of the request.
 
