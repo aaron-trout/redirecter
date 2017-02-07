@@ -8,15 +8,17 @@ a request to `redirecter` at `http://localhost:8000/foo/bar?stuff=things` would
 redirect to `http://example.com/foo/bar?stuff=things`.
 
 ## Running with Docker
-The easiest way to run is with the pre-built Docker image. The configuration is
-done via environment variables and should be self explanatory:
+The easiest way to run is with the
+[pre-built Docker image](https://hub.docker.com/r/aaron465/redirecter/).
+The configuration is done via environment variables and should be
+self explanatory:
 
 ```bash
 $ docker run --detach --publish 80:8000 --restart always --name redirecter \
     --env "REDIRECTER_TARGET=http://example.com" \
     --env "REDIRECTER_HOST=0.0.0.0" \
     --env "REDIRECTER_PORT=8000" \
-    redirecter:latest
+    aaron465/redirecter:latest
 ```
 
 Note: Do *NOT* include a trailing slash ('/') on the `REDIRECTER_TARGET`
